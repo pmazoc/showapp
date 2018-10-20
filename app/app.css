@@ -1,0 +1,37 @@
+/* app css stylesheet */
+
+:root{
+  --blue: #4285f4;
+  --grey: #f5f5f5;
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+
+.menu-header{ grid-area: header; }
+.search-bar{ grid-area: bar; }
+.main-content{ grid-area: main; }
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "header header"
+    "bar bar"
+    "main main";
+}
+
+.menu-header {
+  color: var(--blue);
+  width: 100%;
+}
+
+.menu-header img{
+  float: left;
+}
+
+.menu-header nav{
+  float: right;
+}
+
+.search-bar{
+  background-color: var(--grey);
+}
