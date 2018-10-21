@@ -9,6 +9,13 @@
     <h3><b>Descubra nuevas películas y programas de televisión</b></b></h3>
 </div>
 
+<div class="filters">
+    <div class="medium-3 columns">
+        <select ng-options="i.name for i in genres track by i.id"
+                ng-model="genre"></select>
+    </div>
+</div>
+
 <div class="main-content">
     <div ng-repeat="m in movies" class="card">
         <div class="poster">
@@ -17,17 +24,19 @@
         <div class="info-card">
             <h4>{{m.title}}</h4> <b>{{m.vote_average}}</b> <br>
             2h 16min | 5 May 2017 (USA) | Acción<br>
-            <button class="trailer-button">Ver Trailer</button>
+            <modal-window>
+                <div class="modal-heading">Trailer</div>
+                <div class="modal-cont" align="center">
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/ABDiB48VPJc"> </iframe>
+                </div>
+            </modal-window>
         </div>
     </div>
 </div>
 
 <br><br>
 
-<div>
-    Paginación:
-    <ul ng-if="totalPages.length > 1">
-        <li ng-repeat="p in totalPages"><a ng-click="goToPage(p)">{{p}}</a></li>
-    </ul>
+<div class="pagination" ng-if="totalPages.length > 1">
+    <a ng-repeat="p in totalPages" ng-click="goToPage(p)">{{p}}</a>
 </div>
 

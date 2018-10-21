@@ -36,7 +36,7 @@ npm start
 
 Luego de ejecutar este comando, obtendrás una URL en el Localhost para acceder a ella.
 
-## Directory Layout
+## Estructura de Directorios
 
 ```
 app/                        --> todos los archivos fuente de la aplicación
@@ -48,6 +48,7 @@ app/                        --> todos los archivos fuente de la aplicación
       moviesView.html       --> plantilla HTML del componente
   directives/               --> directivas creadas para la aplicación
   assets/                   --> contiene los objetos multimedia
+  utils/                    --> utilitarios transversales a la aplicación  
   app.js                    --> módulo principal de la aplicación
   index.html                --> principal plantilla html
   index-async.html          --> el mismo index.html, pero carga los archivos JS de forma asíncrona

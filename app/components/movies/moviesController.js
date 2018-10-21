@@ -6,6 +6,19 @@ showapp.controller('moviesController', ['$scope', 'moviesService', function($sco
     $scope.movies = [];
     $scope.page = 1;
     $scope.totalPages = [];
+    $scope.genres = "";
+    $scope.genre = "";
+
+    var todos = {
+        "id": -1,
+        "name": "Todos"
+    };
+
+    moviesService.getGenres().then(function (data) {
+        $scope.genres=data.data.genres;
+        $scope.genres.unshift(todos);
+        $scope.genre=todos;
+    })
 
     $scope.searchMoviesByName = function() {
         $scope.message = $scope.query;
