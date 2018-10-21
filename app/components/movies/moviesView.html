@@ -1,10 +1,33 @@
 <div class="search-bar">
     <form>
+        <img class="search-icon" src="assets/search-icon.png">
         <input ng-model="query" type="text" ng-enter="searchMoviesByName()" placeholder="Search for a movie, series and videos">
     </form>
 </div>
 
-<div class="main-content ">
-    {{hola}}
+<div class="title">
+    <h3><b>Descubra nuevas películas y programas de televisión</b></b></h3>
+</div>
+
+<div class="main-content">
+    <div ng-repeat="m in movies" class="card">
+        <div class="poster">
+            <img src="assets/poster.jpg" />
+        </div>
+        <div class="info-card">
+            <h4>{{m.title}}</h4> <b>{{m.vote_average}}</b> <br>
+            2h 16min | 5 May 2017 (USA) | Acción<br>
+            <button class="trailer-button">Ver Trailer</button>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<div>
+    Paginación:
+    <ul ng-if="totalPages.length > 1">
+        <li ng-repeat="p in totalPages"><a ng-click="goToPage(p)">{{p}}</a></li>
+    </ul>
 </div>
 

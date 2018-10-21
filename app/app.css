@@ -3,6 +3,7 @@
 :root{
   --blue: #4285f4;
   --grey: #f5f5f5;
+  --dark-grey: #9b9b9b;
   --font-color: #6f7b83;
   font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
@@ -10,6 +11,8 @@
 .menu-header{ grid-area: header; }
 .search-bar{ grid-area: bar; }
 .main-content{ grid-area: main; }
+.title{ grid-area: title }
+.card{ grid-area: card; }
 
 .grid-container{
   display: grid;
@@ -17,7 +20,8 @@
   grid-template-areas:
           "header header"
           "bar bar"
-          "main main";
+          "title title"
+          "main main"
 }
 
 .menu-header {
@@ -31,7 +35,15 @@
 }
 
 .menu-header nav{
+  text-align: center;
+  color: var(--font-color);
   float: right;
+  margin-top: 1%;
+  margin-right: 3%;
+}
+
+.menu-header nav a:enabled{
+  color: var(--blue);
 }
 
 .search-bar{
@@ -44,10 +56,69 @@
   border: none;
   background-color: var(--grey);
   margin-left: 3%;
-  align-self: center;
-  outline: none;
+  position: absolute;
+  left:0;
+}
+
+.search-icon{
+  position: absolute;
+  left: 100%;
+}
+
+input::placeholder{
+  color: var(--dark-grey);
+  font-style: italic;
+}
+
+.title h3 {
+  color: var(--font-color);
+  margin-left: 3%;
 }
 
 .main-content{
-  
+
 }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 40%;
+  margin: 3%;
+  text-align: left;
+}
+
+.card img{
+  border-radius: 5px 0 0 5px;
+  display: inline-block;
+  width: 20%;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+
+.poster{
+  position: relative;
+  z-index: 0;
+  flex-basis: 40%;
+  height: auto;
+}
+
+.info-card{
+  display: inline-block;
+  width: calc(80% - 15px);
+  margin: 0;
+  padding: 0;
+}
+
+.info-card h4 b{
+  color: var(--font-color);
+}
+
+.trailer-button{
+  border-color: var(--blue);
+  border-radius: 5px;
+  color: var(--blue);
+  background-color: white;
+  padding: 5px;
+
+
+}
+
