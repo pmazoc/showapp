@@ -21,13 +21,14 @@ showapp.controller('moviesController', ['$scope', 'moviesService', function($sco
     })
 
     $scope.searchMoviesByName = function() {
-        $scope.message = $scope.query;
         moviesService.getMoviesByName($scope.query, $scope.page)
             .then(function (data) {
                 $scope.page = data.data.page;
                 $scope.totalPages = $scope.setTotalPages(data.data.total_pages);
-                console.log("totalPages: ", $scope.totalPages);
                 $scope.movies = data.data.results;
+            })
+            .catch(function (e) {
+                alert("No se pudo realizar la búsqueda. Error: ", e);
             });
     }
 
@@ -41,7 +42,6 @@ showapp.controller('moviesController', ['$scope', 'moviesService', function($sco
         }else{
             $scope.totalPages = [];
         }
-        console.log(array);
         return array;
     }
 
