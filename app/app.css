@@ -86,6 +86,20 @@ input::placeholder{
 
 .filters{
   margin-left: 3%;
+  display: inline-block;
+  color: var(--font-color);
+  margin-bottom: 1%;
+}
+
+.filters div{
+  margin-bottom: 3%;
+}
+
+.filters select{
+  color: var(--dark-grey);
+  border-color: var(--dark-grey);
+  border-radius: 3px;
+  width: 130%;
 }
 
 .card {
@@ -112,7 +126,6 @@ input::placeholder{
 
 .info-card{
   display: inline-block;
-
   margin: 0;
   padding: 0;
 }
@@ -197,4 +210,3 @@ input::placeholder{
   background-color: var(--grey);
   border-radius: 5px;
 }
-
