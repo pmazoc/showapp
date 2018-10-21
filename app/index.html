@@ -14,12 +14,12 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
-  <script type="text/javascript" src="components/movies/moviesController.js"></script>
+  <script src="components/movies/moviesController.js"></script>
+  <script src="components/movies/moviesService.js"></script>
+  <script src="directives/enter.js"></script>
 
 </head>
 <body ng-app="showapp">
@@ -34,10 +34,6 @@
     </nav>
   </div>
 
-  <div class="search-bar">
-    Search for a movie, series and videos
-  </div>
-
-  <div ng-view></div>
+  <div ng-view class="main-content"></div>
 
 </body>

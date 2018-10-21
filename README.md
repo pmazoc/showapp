@@ -1,17 +1,13 @@
-# `angular-seed` — the seed for AngularJS apps
+# `Showapp`
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+Este proyecto fue creado a partir de la semilla `angular-seed` Disponible [aquí][angular-seed].
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
+En este proyecto se realizan llamados al API de The Movie DB. 
+![alt text](https://www.themoviedb.org/assets/1/v4/logos/408x161-powered-by-rectangle-blue-10d3d41d2a0af9ebcb85f7fb62ffb6671c15ae8ea9bc82a2c6941f223143409e.png "The Movie DB")
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
+## Iniciar Aplicación
 
-
-## Getting Started
-
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
+Para iniciar la aplicación debes clonar el repositorio e instalar las dependencias. Para esto debes tener instalado npm.  `angular-seed` repository and install the dependencies:
 
 ### Prerequisites
 
@@ -245,40 +241,7 @@ http-server -a localhost -p 8000
 Alternatively, you can choose to configure your own web server, such as Apache or Nginx. Just
 configure your server to serve the files under the `app/` directory.
 
-### Running the App in Production
-
-This really depends on how complex your app is and the overall infrastructure of your system, but
-the general rule is that all you need in production are the files under the `app/` directory.
-Everything else should be omitted.
-
-Angular apps are really just a bunch of static HTML, CSS and JavaScript files that need to be hosted
-somewhere they can be accessed by browsers.
-
-If your Angular app is talking to the backend server via XHR or other means, you need to figure out
-what is the best way to host the static files to comply with the same origin policy if applicable.
-Usually this is done by hosting the files by the backend server or through reverse-proxying the
-backend server(s) and web server(s).
-
-
-## Continuous Integration
-
-### Travis CI
-
-[Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits to
-your repository and execute scripts such as building the app or running tests. The `angular-seed`
-project contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
-tests when you push to GitHub.
-
-You will need to enable the integration between Travis and GitHub. See the
-[Travis website][travis-docs] for instructions on how to do this.
-
-
-## Contact
-
-For more information on AngularJS please check out [angularjs.org][angularjs].
-
-
-[angularjs]: https://angularjs.org/
+[angular-seed]: https://github.com/angular/angular-seed
 [bower]: http://bower.io/
 [git]: https://git-scm.com/
 [http-server]: https://github.com/indexzero/http-server

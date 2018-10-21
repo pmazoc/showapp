@@ -3,6 +3,7 @@
 :root{
   --blue: #4285f4;
   --grey: #f5f5f5;
+  --font-color: #6f7b83;
   font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
 
@@ -14,9 +15,9 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas:
-    "header header"
-    "bar bar"
-    "main main";
+          "header header"
+          "bar bar"
+          "main main";
 }
 
 .menu-header {
@@ -26,6 +27,7 @@
 
 .menu-header img{
   float: left;
+  margin-left: 3%;
 }
 
 .menu-header nav{
@@ -34,4 +36,18 @@
 
 .search-bar{
   background-color: var(--grey);
+  padding: 0.5%;
+}
+
+.search-bar input{
+  width: 100%;
+  border: none;
+  background-color: var(--grey);
+  margin-left: 3%;
+  align-self: center;
+  outline: none;
+}
+
+.main-content{
+  
 }
