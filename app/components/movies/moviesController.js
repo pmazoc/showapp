@@ -25,6 +25,7 @@ showapp.controller('moviesController', ['$scope', 'moviesService', function($sco
             .then(function (data) {
                 $scope.page = data.data.page;
                 $scope.totalPages = $scope.setTotalPages(data.data.total_pages);
+                if(data.data.total_results == 0) alert("Sorry no movies were found related to these criterias.")
                 $scope.movies = data.data.results;
             })
             .catch(function (e) {
@@ -48,6 +49,10 @@ showapp.controller('moviesController', ['$scope', 'moviesService', function($sco
     $scope.goToPage = function(page){
         $scope.page = page;
         $scope.searchMoviesByName();
+    }
+
+    $scope.setResults = function(movies){
+        $scope.movies = data.data.results;
     }
 
 }]);
