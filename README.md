@@ -53,9 +53,6 @@ app/                        --> todos los archivos fuente de la aplicación
   index.html                --> principal plantilla html
   index-async.html          --> el mismo index.html, pero carga los archivos JS de forma asíncrona
 ```
-## Acceso
-
-La aplicación está disponible en http://pmazoc.github.io/showapp
 
 [angular-seed]: https://github.com/angular/angular-seed
 [git]: https://git-scm.com/
