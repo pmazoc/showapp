@@ -13,6 +13,9 @@ angular.module("showapp").value("properties", {
     language: "es",
 
     // Search path.
-    apiSearch: "/search/movie"
+    apiSearch: "/search/movie",
+
+    //Poster path
+    apiPoster: "https://image.tmdb.org/t/p/w300"
 
 });

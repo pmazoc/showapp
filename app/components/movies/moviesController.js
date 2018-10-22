@@ -1,5 +1,5 @@
 var showapp = angular.module('showapp')
-showapp.controller('moviesController', ['$scope', 'moviesService', function($scope, moviesService){
+showapp.controller('moviesController', ['$scope', 'moviesService', 'properties', function($scope, moviesService, properties){
 
     $scope.query = "";
     $scope.message = "Hola mundo";
@@ -8,10 +8,11 @@ showapp.controller('moviesController', ['$scope', 'moviesService', function($sco
     $scope.totalPages = [];
     $scope.genres = "";
     $scope.genre = "";
+    $scope.poster = properties.apiPoster;
 
     var todos = {
         "id": -1,
-        "name": "Todos"
+        "name": "Filtrar por..."
     };
 
     moviesService.getGenres().then(function (data) {

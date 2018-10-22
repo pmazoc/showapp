@@ -120,13 +120,11 @@ input::placeholder{
 }
 
 .poster{
-  display: inline-block;
   float: left;
 }
 
 .info-card{
-  display: inline-block;
-  margin: 0;
+  margin: 2%;
   padding: 0;
 }
 

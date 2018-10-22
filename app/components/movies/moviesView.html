@@ -12,15 +12,14 @@
 <div class="filters">
     <div>Género</div>
     <div class="medium-3 columns">
-        <select ng-options="i.name for i in genres track by i.id"
-                ng-model="genre"></select>
+        <select ng-options="i.name for i in genres track by i.id" ng-model="genre"></select>
     </div>
 </div>
 
 <div class="main-content">
     <div ng-repeat="m in movies" class="card">
         <div class="poster">
-            <img src="assets/poster.jpg" />
+            <img src="{{poster + m.poster_path}}" />
         </div>
         <div class="info-card">
             <h4>{{m.title}}</h4> <b>{{m.vote_average}}</b> <br>
